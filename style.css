@@ -125,7 +125,7 @@ body {
 @media only screen and (min-width: 768px) {
 	body {
 		max-width: 768px;
-		background-color: hsl(30, 18%, 87%);
+		background-color: hsl(30, 54%, 90%);
 		margin: auto;
 	}
 }
