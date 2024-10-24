@@ -90,12 +90,6 @@ textarea:not([rows]) {
 
 @font-face {
 	font-family: 'Outfit';
-	src: url('/assets/fonts/outfit/static/Outfit-Light.ttf') format('truetype');
-	font-weight: 300;
-}
-
-@font-face {
-	font-family: 'Outfit';
 	src: url('/assets/fonts/outfit/static/Outfit-Regular.ttf') format('truetype');
 	font-weight: 400;
 }
@@ -131,7 +125,7 @@ body {
 @media only screen and (min-width: 768px) {
 	body {
 		max-width: 768px;
-		background-color: #f3e5d8;
+		background-color: hsl(30, 18%, 87%);
 		margin: auto;
 	}
 }
@@ -142,17 +136,17 @@ h2 {
 }
 
 h2 {
-	color: #8e5948;
+	color: hsl(14, 45%, 36%);
 }
 
 h3 {
 	font-weight: 600;
-	color: #5f203b;
+	color: hsl(332, 51%, 32%);
 }
 
 p {
 	font-family: 'Outfit', sans-serif;
-	font-weight: 300;
+	font-weight: 400;
 }
 
 img {
@@ -167,19 +161,19 @@ img {
 }
 
 th {
-	font-weight: 300;
+	font-weight: 400;
 }
 
 td {
 	font-weight: 600;
-	color: #8e5948;
+	color: hsl(14, 45%, 36%);
 }
 
 /* global container */
 
 @media only screen and (min-width: 768px) {
 	.global__container {
-		background-color: white;
+		background-color: hsl(0, 0%, 100%);
 		padding: 2.5em;
 		margin: 4em 0;
 		border-radius: 1em;
@@ -221,7 +215,7 @@ ol li {
 }
 
 ol li::marker {
-	color: #8e5948;
+	color: hsl(14, 45%, 36%);
 	font-weight: 700;
 }
 
@@ -239,11 +233,11 @@ ul li {
 ul li::before {
 	content: '•';
 	margin-right: 1.5em;
-	color: #5f203b;
+	color: hsl(332, 51%, 32%);
 }
 
 ul li.brown::before {
-	color: #8e5948;
+	color: hsl(14, 45%, 36%);
 }
 
 td,
@@ -262,7 +256,7 @@ th {
 
 .prep__time {
 	padding: 1.2em;
-	background-color: #fff7fc;
+	background-color: hsl(330, 100%, 98%);
 	border-radius: 0.7em;
 }
 
