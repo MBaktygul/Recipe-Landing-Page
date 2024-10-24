@@ -1,0 +1,271 @@
+/* Normalize */
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	margin: 0;
+}
+
+/* Prevent font size inflation */
+html {
+	-moz-text-size-adjust: none;
+	-webkit-text-size-adjust: none;
+	text-size-adjust: none;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+	margin-block-end: 0;
+}
+
+/* Set core body defaults */
+body {
+	min-height: 100vh;
+	line-height: 1.5;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1,
+h2,
+h3,
+h4,
+button,
+input,
+label {
+	line-height: 1.1;
+}
+
+/* Balance text wrapping on headings */
+/* h1,
+h2,
+h3,
+h4 {
+	text-wrap: balance;
+} */
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+	text-decoration-skip-ink: auto;
+	color: currentColor;
+}
+
+/* Make images easier to work with  */
+img,
+picture {
+	max-width: 100%;
+	display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+	font-family: inherit;
+	font-size: inherit;
+}
+
+/* Make sure textareas without a rows attribute are not tiny */
+textarea:not([rows]) {
+	min-height: 10em;
+}
+
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+	scroll-margin-block: 5ex;
+}
+
+/* @font-face */
+
+@font-face {
+	font-family: 'Outfit';
+	src: url('/assets/fonts/outfit/static/Outfit-Light.ttf') format('truetype');
+	font-weight: 300;
+}
+
+@font-face {
+	font-family: 'Outfit';
+	src: url('/assets/fonts/outfit/static/Outfit-Regular.ttf') format('truetype');
+	font-weight: 400;
+}
+
+@font-face {
+	font-family: 'Outfit';
+	src: url('/assets/fonts/outfit/static/Outfit-SemiBold.ttf') format('truetype');
+	font-weight: 600;
+}
+
+@font-face {
+	font-family: 'Outfit';
+	src: url('/assets/fonts/outfit/static/Outfit-Bold.ttf') format('truetype');
+	font-weight: 700;
+}
+
+@font-face {
+	font-family: 'Young Serif';
+	src: url('/assets/fonts/young-serif/YoungSerif-Regular.ttf') format('truetype');
+}
+
+/* global */
+
+.main__container {
+	margin: 0 1.3em;
+}
+
+body {
+	font-family: 'Outfit', sans-serif;
+	margin-bottom: 2em;
+}
+
+@media only screen and (min-width: 768px) {
+	body {
+		max-width: 768px;
+		background-color: #f3e5d8;
+		margin: auto;
+	}
+}
+
+h1,
+h2 {
+	font-family: 'Young Serif', sans-serif;
+}
+
+h2 {
+	color: #8e5948;
+}
+
+h3 {
+	font-weight: 600;
+	color: #5f203b;
+}
+
+p {
+	font-family: 'Outfit', sans-serif;
+	font-weight: 300;
+}
+
+img {
+	margin-bottom: 1.7em;
+	display: block;
+}
+
+@media only screen and (min-width: 768px) {
+	img {
+		border-radius: 1em;
+	}
+}
+
+th {
+	font-weight: 300;
+}
+
+td {
+	font-weight: 600;
+	color: #8e5948;
+}
+
+/* global container */
+
+@media only screen and (min-width: 768px) {
+	.global__container {
+		background-color: white;
+		padding: 2.5em;
+		margin: 4em 0;
+		border-radius: 1em;
+	}
+}
+
+/* main__container */
+
+.main__container {
+	display: grid;
+	gap: 1.7em;
+}
+
+@media only screen and (min-width: 768px) {
+	.main__container {
+		margin: 0;
+	}
+}
+
+/* section */
+
+.section {
+	display: flex;
+	flex-direction: column;
+	gap: 1em;
+}
+
+/* list */
+
+ol {
+	display: flex;
+	flex-direction: column;
+	gap: 1em;
+	padding-left: 1.2em;
+}
+
+ol li {
+	padding-left: 1em;
+}
+
+ol li::marker {
+	color: #8e5948;
+	font-weight: 700;
+}
+
+ul {
+	list-style-type: none;
+	padding: 0;
+}
+
+ul li {
+	display: flex;
+	align-items: center;
+	margin-bottom: 0.5em;
+}
+
+ul li::before {
+	content: '•';
+	margin-right: 1.5em;
+	color: #5f203b;
+}
+
+ul li.brown::before {
+	color: #8e5948;
+}
+
+td,
+th {
+	border-bottom: 1px solid #dddddd;
+	text-align: left;
+	padding: 0.5em 0;
+}
+
+th {
+	padding-left: 2em;
+	max-width: 4em;
+}
+
+/* recipe prep__time */
+
+.prep__time {
+	padding: 1.2em;
+	background-color: #fff7fc;
+	border-radius: 0.7em;
+}
+
+.bold {
+	font-weight: 600;
+}
