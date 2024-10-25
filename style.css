@@ -179,6 +179,10 @@ p {
 
 /* global container */
 
+.global__container {
+	font-family: inherit;
+}
+
 @media only screen and (min-width: 48rem) {
 	.global__container {
 		max-width: 48rem;
