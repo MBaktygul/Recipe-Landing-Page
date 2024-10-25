@@ -1,4 +1,4 @@
-/* Normalize */
+/* CSS reset */
 
 /* Box sizing rules */
 *,
@@ -47,12 +47,12 @@ label {
 }
 
 /* Balance text wrapping on headings */
-/* h1,
+h1,
 h2,
 h3,
 h4 {
 	text-wrap: balance;
-} */
+}
 
 /* A elements that don't have a class get default styles */
 a:not([class]) {
@@ -81,11 +81,6 @@ textarea:not([rows]) {
 	min-height: 10em;
 }
 
-/* Anything that has been anchored to should have extra scroll margin */
-:target {
-	scroll-margin-block: 5ex;
-}
-
 /* @font-face */
 
 @font-face {
@@ -109,96 +104,120 @@ textarea:not([rows]) {
 @font-face {
 	font-family: 'Young Serif';
 	src: url('/assets/fonts/young-serif/YoungSerif-Regular.ttf') format('truetype');
+	font-weight: 400;
+}
+
+/* root */
+
+:root {
+	/* colors */
+
+	--clr-white: hsl(0, 0%, 100%);
+
+	--clr-stone-100: hsl(30, 54%, 90%);
+	--clr-stone-150: hsl(30, 18%, 87%);
+	--clr-stone-600: hsl(30, 10%, 34%);
+	--clr-stone-900: hsl(24, 5%, 18%);
+
+	--clr-brown: hsl(14, 45%, 36%);
+
+	--clr-rose-800: hsl(332, 51%, 32%);
+	--clr-rose-50: hsl(330, 100%, 98%);
+
+	/* font-sizes */
+	--fs-400: 1rem;
+
+	/* font-weights */
+
+	--fw--serif: 400;
+
+	--fw--outfit-bold: 700;
+	--fw--outfit-semibold: 600;
+	--fw--outfit-regular: 400;
+
+	/* font-families */
+	--ff-content: 'Outfit', sans-serif;
+	--ff-heading: 'Young Serif', serif;
 }
 
 /* global */
 
-.main__container {
-	margin: 0 1.3em;
-}
-
 body {
-	font-family: 'Outfit', sans-serif;
+	font-family: 'Outfit', serif;
 	margin-bottom: 2em;
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 48rem) {
 	body {
-		max-width: 768px;
-		background-color: hsl(30, 54%, 90%);
+		max-width: 48rems;
+		background-color: var(--clr-stone-100);
 		margin: auto;
 	}
 }
 
+/* headings */
+
 h1,
-h2 {
-	font-family: 'Young Serif', sans-serif;
+h3 {
+	font-family: var(--ff-heading);
 }
 
 h2 {
-	color: hsl(14, 45%, 36%);
+	font-family: var(--ff-content);
+	color: var(--clr-rose-800);
 }
 
 h3 {
-	font-weight: 600;
-	color: hsl(332, 51%, 32%);
+	font-size: 1.8rem;
+	color: var(--clr-brown);
 }
 
+/* text */
 p {
-	font-family: 'Outfit', sans-serif;
-	font-weight: 400;
-}
-
-img {
-	margin-bottom: 1.7em;
-	display: block;
-}
-
-@media only screen and (min-width: 768px) {
-	img {
-		border-radius: 1em;
-	}
-}
-
-th {
-	font-weight: 400;
-}
-
-td {
-	font-weight: 600;
-	color: hsl(14, 45%, 36%);
+	font-family: var(--ff-content);
 }
 
 /* global container */
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 48rem) {
 	.global__container {
-		background-color: hsl(0, 0%, 100%);
-		padding: 2.5em;
-		margin: 4em 0;
-		border-radius: 1em;
+		max-width: 48rem;
+		background-color: var(--clr-white);
+		padding: 2.5rem;
+		margin: 6rem auto;
+		border-radius: 1rem;
 	}
 }
 
-/* main__container */
-
-.main__container {
-	display: grid;
-	gap: 1.7em;
+img {
+	margin-bottom: 1.7rem;
+	display: block;
 }
 
-@media only screen and (min-width: 768px) {
-	.main__container {
+@media only screen and (min-width: 48rem) {
+	img {
+		border-radius: 1rem;
+	}
+}
+
+/* content */
+
+.content {
+	display: grid;
+	gap: 1.7rem;
+	margin: 0 1.3rem;
+}
+
+@media only screen and (min-width: 48rem) {
+	.content {
 		margin: 0;
 	}
 }
 
-/* section */
-
-.section {
+.content__section {
 	display: flex;
 	flex-direction: column;
-	gap: 1em;
+	gap: 1rem;
 }
 
 /* list */
@@ -206,17 +225,17 @@ td {
 ol {
 	display: flex;
 	flex-direction: column;
-	gap: 1em;
-	padding-left: 1.2em;
+	gap: 1rem;
+	padding-left: 1.2rem;
 }
 
 ol li {
-	padding-left: 1em;
+	padding-left: 1rem;
 }
 
 ol li::marker {
-	color: hsl(14, 45%, 36%);
-	font-weight: 700;
+	color: var(--clr-brown);
+	font-weight: var(--fw--outfit-bold);
 }
 
 ul {
@@ -227,46 +246,73 @@ ul {
 ul li {
 	display: flex;
 	align-items: center;
-	margin-bottom: 0.5em;
+	margin-bottom: 0.5rem;
 }
 
 ul li::before {
 	content: '•';
-	margin-right: 1.5em;
-	color: hsl(332, 51%, 32%);
+	margin-right: 1.5rem;
+	color: var(--clr-rose-800);
 }
 
 ul li.brown::before {
-	color: hsl(14, 45%, 36%);
+	color: var(--clr-brown);
+}
+
+/* table */
+
+table {
+	width: 100%;
+	border-collapse: collapse;
 }
 
 td,
 th {
-	border-bottom: 1px solid #dddddd;
+	border-bottom: 0.5px solid var(--clr-stone-900);
 	text-align: left;
-	padding: 0.5em 0;
+	padding: 0.5rem 0;
 }
 
 th {
-	padding-left: 2em;
-	max-width: 4em;
+	padding-left: 2rem;
+	max-width: 4rem;
+	font-weight: 400;
 }
 
-/* recipe prep__time */
+td {
+	font-weight: 600;
+	color: var(--clr-brown);
+}
+
+/*section prep__time */
 
 .prep__time {
-	padding: 1.2em;
-	background-color: hsl(330, 100%, 98%);
-	border-radius: 0.7em;
+	padding: 1.2rem;
+	background-color: var(--clr-rose-50);
+	border-radius: 0.7rem;
 }
+
+/* typography */
 
 .bold {
 	font-weight: 600;
 }
 
+/* divider */
+
+.divider {
+	border-bottom: 0.5px solid var(--clr-stone-900);
+	padding-bottom: 1.7rem;
+}
+
+/* attribution */
+
 .attribution {
+	font-size: 0.8rem;
+	margin-top: 4rem;
 	display: flex;
 	justify-content: center;
 	flex-direction: column;
 	align-items: center;
+	gap: 0.2rem;
 }
