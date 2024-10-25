@@ -165,10 +165,11 @@ h3 {
 h2 {
 	font-family: var(--ff-content);
 	color: var(--clr-rose-800);
+	font-size: 1.2rem;
 }
 
 h3 {
-	font-size: 1.8rem;
+	font-size: 1.5rem;
 	color: var(--clr-brown);
 }
 
