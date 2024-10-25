@@ -263,3 +263,10 @@ th {
 .bold {
 	font-weight: 600;
 }
+
+.attribution {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	align-items: center;
+}
